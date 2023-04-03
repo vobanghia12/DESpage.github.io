@@ -2,66 +2,86 @@
    Copied and modified from mdw.css from http://www.eecs.harvard.edu/~mdw/
    Last modified on August 28, 2015
 */
-*{
+* {
   box-sizing: border-box;
 }
-body
-{
-    font-family:  Arial, Helvetica, sans-serif, serif;
-    background-color: #006747;
-    color: rgb(0,0,0);
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+body {
+  font-family: Arial, Helvetica, sans-serif, serif;
+  background-color: #006747;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-div, h1, h2, h3, h4, h5, h6 {
-    display: block;
-    margin: 0;
-    padding: 0;
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
-.content
-{
-    min-width: 300px;
-
+.content {
+  min-width: 300px;
 }
 
-.container
-{
-    background-color: rgb(255,255,255);
-    padding: 20px;
-    margin: 14px auto;
-    width: 500px;
-    height: 500px;
-    border-radius: 0.75rem;
-    box-shadow:  0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
-    will-change: transform;
-    transition: transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
-
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  margin: 14px auto;
+  width: 700px;
+  height: 500px;
+  border-radius: 0.75rem;
+  box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+  will-change: transform;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.box {
+  margin: auto;
+  background-color: #006747;
+  width: 300px;
+  height: 30px;
+  border-radius: px;
+  margin-bottom: 1.5rem;
+  padding: 5px;
+  border-radius: 5px;
+}
+a:visited {
+  color: white;
+}
+li {
+  font-weight: bold;
+}
 .container:hover {
   transform: scale(1.1);
-  box-shadow:  0 32px 80px 14px rgba(0,0,0,0.36), 0 0 0 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 32px 80px 14px rgba(0, 0, 0, 0.36), 0 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 ul {
   margin-top: 30px;
-  padding:0;
+  padding: 0;
   list-style: none;
 }
 li {
   margin-bottom: 10px;
 }
-a{
+a {
   text-decoration: none;
 }
-footer{
+
+a:hover {
+  opacity: 0.7;
+}
+footer {
   margin-top: 4rem;
 }
 
@@ -69,7 +89,32 @@ footer{
   margin-top: 30px;
 }
 
+.stats h5 {
+  margin-bottom: 5px;
+}
+footer {
+  font-size: 1.2rem;
+}
+#counter {
+  font-size: 1.5rem;
+}
+h5 {
+  color: gray;
+  text-align: left;
+}
 
+.analysis {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.dateTime {
+  margin-left: 80px;
+}
+#lastVisit {
+  margin-top: 8px;
+}
 
 /*@media (min-width: 640px) {
   .container {
@@ -114,3 +159,19 @@ footer{
   }
 }
 */
+@media (max-width: 1000px) {
+  .container {
+    width: 600px;
+    height: 550px;
+  }
+  ul {
+    margin-top: 20px;
+  }
+
+  .box {
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 2.2rem;
+    font-size: 1.2rem;
+  }
+}
